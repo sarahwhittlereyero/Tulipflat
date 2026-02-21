@@ -7,6 +7,8 @@ import ContactPage from '@/pages/ContactPage'
 import TipsPage from '@/pages/TipsPage'
 import CityGuidePage from '@/pages/CityGuidePage'
 
+const basename = import.meta.env.BASE_URL
+
 const router = createBrowserRouter([
   {
     element: <PageLayout />,
@@ -19,7 +21,7 @@ const router = createBrowserRouter([
       { path: '/tips/:slug', element: <CityGuidePage /> },
     ],
   },
-])
+], { basename })
 
 export default function App() {
   return <RouterProvider router={router} />
